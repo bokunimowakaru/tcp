@@ -9,7 +9,7 @@
 
 import socket                                               # ソケットの組み込み
 
-port = 1024                                                 # ポート番号を代入
+port = 8080                                                 # ポート番号を代入
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)    # TCP用ソケット作成
 sock.connect(('127.0.0.1', port))                           # TCP接続
 tcp = 'Ping\n'                                              # 送信文字列
@@ -19,7 +19,7 @@ sock.close()                                                # ソケットの切
 ''' ----------------------------------------------------------------------------
 TCPサーバ側：
 pi@raspberry:~/tcp/learning $ ./ex2_rx.py
-Listening TCP port 1024 ...
+Listening TCP port 8080 ...
 127.0.0.1 59850
 Ping
 

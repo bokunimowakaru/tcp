@@ -11,7 +11,7 @@ import socket                                               # ソケットの組
 from time import sleep                                      # スリープの組み込み
 from lib_tempSensor import TempSensor                       # 温度センサ組み込み
 
-port = 1024                                                 # ポート番号を代入
+port = 8080                                                 # ポート番号を代入
 tempSensor = TempSensor()                                   # 温度センサの実体化
 tempSensor.offset = 30                                      # 補正値30を設定
 

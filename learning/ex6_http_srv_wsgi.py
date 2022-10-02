@@ -14,7 +14,7 @@ def wsgi_app(environ, start_response):                      # (関数)HTTP受信
     return [html.encode()]                                  # 応答メッセージ返却
 
 def httpd():                                                # (関数)HTTPサーバ
-    port = 1024                                             # ポート番号を代入
+    port = 8080                                             # ポート番号を代入
     htserv = make_server('', port, wsgi_app)                # サーバ実体化
     try:                                                    # 例外処理の監視
         htserv.serve_forever()                              # HTTPサーバを起動

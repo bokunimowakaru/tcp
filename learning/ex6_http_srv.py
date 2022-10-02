@@ -6,7 +6,7 @@
 
 import socket                                               # ソケットの組み込み
 
-port = 1024                                                 # ポート番号を代入
+port = 8080                                                 # ポート番号を代入
 sock0 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   # TCP用ソケット作成
 sock0.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # ポート再利用の許可
 sock0.bind(('127.0.0.1', port))                             # IPアドレスの設定
@@ -26,16 +26,16 @@ HTTPサーバ側(★本プログラム)：
 pi@raspberry:~/udp/learning $ ./ex6_tcp_srv.py
 127.0.0.1 36762
 GET / HTTP/1.1
-Host: 127.0.0.1:1024
+Host: 127.0.0.1:8080
 User-Agent: curl/7.74.0
 Accept: */*
 --------------------------------------------------------------------------------
 HTTPクラアント側：
-pi@raspberry:~ $ curl -v 127.0.0.1:1024
-*   Trying 127.0.0.1:1024...
-* Connected to 127.0.0.1 (127.0.0.1) port 1024 (#0)
+pi@raspberry:~ $ curl -v 127.0.0.1:8080
+*   Trying 127.0.0.1:8080...
+* Connected to 127.0.0.1 (127.0.0.1) port 8080 (#0)
 > GET / HTTP/1.1
-> Host: 127.0.0.1:1024
+> Host: 127.0.0.1:8080
 > User-Agent: curl/7.74.0
 > Accept: */*
 >
