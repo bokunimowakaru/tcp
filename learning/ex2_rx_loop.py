@@ -17,7 +17,7 @@ import socket                                               # ソケットの組
 port = 8080                                                 # ポート番号を代入
 sock0 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   # TCP用ソケット作成
 sock0.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # ポート再利用の許可
-sock0.bind(('127.0.0.1', port))                             # IPアドレスの設定
+sock0.bind(('', port))                                      # ソケットに接続
 sock0.listen(3)                                             # 同時接続数=3
 # print('Listening TCP port', port, '...')                  # ポート番号表示
 
