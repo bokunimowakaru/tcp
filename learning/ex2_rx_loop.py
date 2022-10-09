@@ -25,7 +25,7 @@ while True:                                                 # 繰り返し構文
     (sock, sock_from) = sock0.accept()                      # アクセス待ち
     # print(sock_from[0], sock_from[1])                     # アクセス元の表示
     tcp = sock.recv(128)                                    # 受信データの取得
-    print(tcp.decode().strip())                             # 受信データを表示
+    print(tcp.decode().strip(), flush=True)                 # 受信データを表示
     sock.close()                                            # 切断
 
 ''' ----------------------------------------------------------------------------
