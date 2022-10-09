@@ -12,7 +12,7 @@ res.close()                                     # HTTPアクセスの終了
 
 ''' ----------------------------------------------------------------------------
 HTTPサーバ側：
-pi@raspberry:~/udp/learning $ ./ex6_tcp_srv.py
+pi@raspberry:~/udp/learning $ ./ex4_tcp_srv.py
 Listening TCP port 8080 ...
 127.0.0.1 37874
 GET / HTTP/1.1
@@ -22,6 +22,6 @@ User-Agent: Python-urllib/3.9
 Connection: close
 --------------------------------------------------------------------------------
 HTTPクラアント側(★本プログラム)：
-pi@raspberry:~/udp/learning $ ./ex7_htget.py
+pi@raspberry:~/udp/learning $ ./ex5_htget.py
 <html>Hello!</html>
 ---------------------------------------------------------------------------- '''

@@ -23,7 +23,7 @@ sock.close()                                                # ソケットの切
 
 ''' ----------------------------------------------------------------------------
 HTTPサーバ側(★本プログラム)：
-pi@raspberry:~/udp/learning $ ./ex6_tcp_srv.py
+pi@raspberry:~/udp/learning $ ./ex4_tcp_srv.py
 127.0.0.1 36762
 GET / HTTP/1.1
 Host: 127.0.0.1:8080
