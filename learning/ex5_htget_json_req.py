@@ -7,7 +7,7 @@
 
 import requests                                 # HTTP通信ライブラリを組み込む
 
-url_s = 'https://bokunimo.net/iot/cq/test.json' # アクセス先を変数url_sへ代入
+url_s = 'https://bokunimo.net/cq/ip/test.json'  # アクセス先を変数url_sへ代入
 
 res = requests.get(url_s)                       # HTTPアクセスを実行
 res_dict = res.json()                           # 受信データを変数res_dictへ代入
