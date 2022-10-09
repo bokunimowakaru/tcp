@@ -14,7 +14,7 @@ sock0.listen(1)                                             # 同時接続数=1
 print('Listening TCP port', port, '...')                    # ポート番号表示
 (sock, sock_from) = sock0.accept()                          # アクセス待ち
 print(sock_from[0], sock_from[1])                           # アクセス元の表示
-tcp = sock.recv(128)                                        # 受信データの取得
+tcp = sock.recv(1024)                                       # 受信データの取得
 print(tcp.decode().strip())                                 # 受信結果の表示
 head = 'HTTP/1.0 200 OK\r\nContent-type: text/html\r\n'     # HTTPヘッダ
 body = '<html>Hello!</html>\r\n'                            # HTTPボディ
