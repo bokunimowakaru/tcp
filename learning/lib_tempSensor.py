@@ -1,3 +1,15 @@
+#!/usr/bin/env python3
+# coding: utf-8
+
+################################################################################
+# Raspberry Pi 内蔵温度センサから温度を取得し、内部発熱分を減算して出力します。
+#
+#                                          Copyright (c) 2019-2025 Wataru KUNINO
+################################################################################
+# 参考文献
+# コンピュータの体温を測って表示してみよう 【オブジェクト指向型】
+# https://github.com/bokunimowakaru/iot/blob/master/learning/example06_temp_o.py
+
 class TempSensor:                                       # クラスTempSensorの定義
     _filename = '/sys/class/thermal/thermal_zone0/temp' # デバイスのファイル名
     try:                                                # 例外処理の監視を開始
